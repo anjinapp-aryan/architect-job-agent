@@ -1,0 +1,20 @@
+search:
+  max_age_days: 30
+  remote_allowed: true
+  minimum_match_score: 85
+  results_per_query: 25
+  sources:
+    - linkedin
+    - indeed
+    - glassdoor
+    - zip_recruiter
+  countries:
+    - Germany
+    - Ireland
+    - Netherlands
+    - Singapore
+  roles:
+    - Architect
+    - Principal Engineer
+  rate_limit_seconds: 5
+  retries: 3

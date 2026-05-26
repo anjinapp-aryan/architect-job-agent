@@ -1,0 +1,4 @@
+coverletter:
+  output_directory: data/cover_letters
+  default_tone: "professional, confident, concise"
+  max_words: 350

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/*.db
+data/tailored_resumes/
+data/cover_letters/
+.pytest_cache/
+.next/
+node_modules/
+frontend/.next/

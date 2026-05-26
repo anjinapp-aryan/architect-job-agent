@@ -1,0 +1,21 @@
+app:
+  name: architect-job-agent
+  log_level: INFO
+
+database:
+  # URL is REQUIRED via DATABASE_URL env var.
+  # Use a Supabase Postgres DSN, e.g.:
+  #   postgresql+psycopg://postgres.<ref>:<pwd>@aws-0-<region>.pooler.supabase.com:6543/postgres
+  url: ""
+  pool_size: 10
+  max_overflow: 10
+  pool_timeout: 30
+  pool_recycle_seconds: 1800
+  statement_timeout_ms: 30000
+  echo: false
+
+ai:
+  provider: claude        # claude | gemini | openai | ollama | nvidia | openrouter
+  temperature: 0.2
+  max_tokens: 4000
+  request_timeout_seconds: 90

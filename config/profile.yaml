@@ -1,0 +1,33 @@
+profile:
+  full_name: "Your Name"
+  email: "you@example.com"
+  experience_years: 12
+  current_title: "Principal Engineer"
+  summary: >
+    Experienced software architect with deep expertise in distributed systems,
+    cloud platforms, and engineering leadership.
+
+  skills:
+    - Java
+    - Spring Boot
+    - AWS
+    - Terraform
+    - Microservices
+    - React
+    - SQL
+    - Kafka
+    - Kubernetes
+    - System Design
+
+  preferred_countries:
+    - Germany
+    - Ireland
+    - Netherlands
+    - Singapore
+
+  preferred_roles:
+    - Architect
+    - Principal Engineer
+    - Staff Engineer
+
+  visa_status: "Open to relocation / sponsorship"

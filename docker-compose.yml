@@ -1,0 +1,35 @@
+services:
+  api:
+    build: .
+    container_name: aja-api
+    env_file: .env
+    environment:
+      # Fail fast if DATABASE_URL is missing.
+      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL must be set in .env (Supabase Postgres DSN)}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config:/app/config
+      - ./data/resumes:/app/data/resumes
+      - ./data/tailored_resumes:/app/data/tailored_resumes
+      - ./data/cover_letters:/app/data/cover_letters
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    image: node:20-alpine
+    container_name: aja-frontend
+    working_dir: /app
+    command: sh -c "npm install && npm run dev -- -H 0.0.0.0"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - api

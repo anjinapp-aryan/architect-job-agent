@@ -1,0 +1,7 @@
+resume:
+  resume_directory: data/resumes
+  master_resume: data/resumes/master_resume.docx
+  tailored_directory: data/tailored_resumes
+  supported_formats:
+    - docx
+    - pdf
